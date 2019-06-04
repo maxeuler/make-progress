@@ -1,11 +1,36 @@
 import React from 'react';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Header from './Header';
 
+const GlobalStyle = createGlobalStyle`
+	html {
+		font-size: 10px;
+		box-sizing: border-box;
+	}
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background: #2c3e50;
+	}
+`;
+
+const theme = {
+	dark: '#2c3e50',
+	bright: '#ecf0f1'
+};
+
 const Page = props => (
-	<>
-		<Header />
-		{props.children}
-	</>
+	<ThemeProvider theme={theme}>
+		<React.Fragment>
+			<GlobalStyle />
+			<Header />
+			{props.children}
+		</React.Fragment>
+	</ThemeProvider>
 );
 
 export default Page;
