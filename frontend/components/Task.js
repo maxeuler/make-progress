@@ -47,9 +47,13 @@ const AddButton = styled.button`
 	cursor: pointer;
 `;
 
+const StyledTask = styled.div`
+	margin: 2rem 0;
+`;
+
 class Task extends Component {
 	state = {
-		showForm: true
+		showForm: false
 	};
 
 	toggleForm = () => {
@@ -58,13 +62,14 @@ class Task extends Component {
 		}));
 	};
 
-	addTask = () => {
+	addProgress = (units, description) => {
+		console.log(units, description);
 		this.toggleForm();
 	};
 
 	render() {
 		return (
-			<div>
+			<StyledTask>
 				<TaskHeader>
 					<p id="title">Title</p>
 					<p>4 von 12 Einheiten</p>
@@ -73,8 +78,8 @@ class Task extends Component {
 					<ProgressBar />
 					<AddButton onClick={this.toggleForm}>+</AddButton>
 				</Progress>
-				{this.state.showForm && <ProgressForm addTask={this.addTask} />}
-			</div>
+				{this.state.showForm && <ProgressForm addProgress={this.addProgress} />}
+			</StyledTask>
 		);
 	}
 }

@@ -1,9 +1,11 @@
 import Tasklist from '../components/Tasklist';
+import TaskForm from '../components/TaskForm';
 
 const Home = props => (
-	<div>
+	<>
+		<TaskForm />
 		<Tasklist />
-	</div>
+	</>
 );
 
 export default Home;

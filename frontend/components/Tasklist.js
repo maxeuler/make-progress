@@ -7,6 +7,7 @@ class Tasklist extends Component {
 		return (
 			<div>
 				<Task />
+				<Task />
 			</div>
 		);
 	}
