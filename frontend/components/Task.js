@@ -49,7 +49,7 @@ const AddButton = styled.button`
 
 class Task extends Component {
 	state = {
-		showForm: false
+		showForm: true
 	};
 
 	toggleForm = () => {

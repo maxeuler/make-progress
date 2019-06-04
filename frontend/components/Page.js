@@ -19,13 +19,15 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Inner = styled.div`
+	width: 80%;
 	max-width: 1300px;
 	margin: 0 auto;
 `;
 
 const theme = {
 	dark: '#2c3e50',
-	bright: '#ecf0f1'
+	bright: '#ecf0f1',
+	border: '#ededed'
 };
 
 const Page = props => (
