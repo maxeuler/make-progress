@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import ProgressForm from './ProgressForm';
 
 const TaskHeader = styled.div`
 	width: 90%;
@@ -47,6 +48,20 @@ const AddButton = styled.button`
 `;
 
 class Task extends Component {
+	state = {
+		showForm: false
+	};
+
+	toggleForm = () => {
+		this.setState(prevState => ({
+			showForm: !prevState.showForm
+		}));
+	};
+
+	addTask = () => {
+		this.toggleForm();
+	};
+
 	render() {
 		return (
 			<div>
@@ -56,8 +71,9 @@ class Task extends Component {
 				</TaskHeader>
 				<Progress>
 					<ProgressBar />
-					<AddButton>+</AddButton>
+					<AddButton onClick={this.toggleForm}>+</AddButton>
 				</Progress>
+				{this.state.showForm && <ProgressForm addTask={this.addTask} />}
 			</div>
 		);
 	}
