@@ -18,6 +18,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
+const Inner = styled.div`
+	max-width: 1300px;
+	margin: 0 auto;
+`;
+
 const theme = {
 	dark: '#2c3e50',
 	bright: '#ecf0f1'
@@ -28,7 +33,7 @@ const Page = props => (
 		<React.Fragment>
 			<GlobalStyle />
 			<Header />
-			{props.children}
+			<Inner>{props.children}</Inner>
 		</React.Fragment>
 	</ThemeProvider>
 );
