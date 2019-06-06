@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const routes = require('./routes/routes');
 
 const app = express();
+
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -17,7 +20,7 @@ mongoose.connection.on('error', err => {
 	console.log(`🚫  🙅  🚫  🙅  🚫  👉  ${err.message}`);
 });
 
-app.set('port', process.env.PORT || 7777);
+app.set('port', process.env.PORT || 8888);
 const server = app.listen(app.get('port'), () => {
 	console.log(`Express running 👉  PORT ${server.address().port}`);
 });

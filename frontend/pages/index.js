@@ -1,10 +1,8 @@
-import Tasklist from '../components/Tasklist';
-import TaskForm from '../components/TaskForm';
+import TasksView from '../components/TasksView';
 
 const Home = props => (
 	<>
-		<TaskForm />
-		<Tasklist />
+		<TasksView />
 	</>
 );
 

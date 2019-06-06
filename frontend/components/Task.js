@@ -68,11 +68,14 @@ class Task extends Component {
 	};
 
 	render() {
+		const { task } = this.props;
 		return (
 			<StyledTask>
 				<TaskHeader>
-					<p id="title">Title</p>
-					<p>4 von 12 Einheiten</p>
+					<p id="title">{task.title}</p>
+					<p>
+						4 von {task.units} {task.unit}
+					</p>
 				</TaskHeader>
 				<Progress>
 					<ProgressBar />

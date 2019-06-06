@@ -6,8 +6,9 @@ class Tasklist extends Component {
 	render() {
 		return (
 			<div>
-				<Task />
-				<Task />
+				{this.props.tasks.map(task => (
+					<Task key={task._id} task={task} />
+				))}
 			</div>
 		);
 	}
