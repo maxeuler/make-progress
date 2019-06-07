@@ -21,7 +21,8 @@ class TaskForm extends Component {
 				method="POST"
 				onSubmit={e => {
 					e.preventDefault();
-					this.submitForm();
+					this.props.createTask(this.state);
+					this.setState({ title: '', unit: '', units: 0 });
 				}}
 			>
 				<label htmlFor="title">

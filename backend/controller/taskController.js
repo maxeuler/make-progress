@@ -1,7 +1,9 @@
 const Task = require('../model/Task');
 
 exports.createTask = async (req, res) => {
-	const newTask = await new Task(req.body).save();
+	const { title, unit } = req.body.task;
+	const units = parseFloat(req.body.task.units);
+	const newTask = await new Task({ title, unit, units }).save();
 	res.json(newTask);
 };
 
