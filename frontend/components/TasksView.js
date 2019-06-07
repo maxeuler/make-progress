@@ -14,7 +14,9 @@ class TasksView extends Component {
 	}
 
 	createTask = async task => {
-		const res = await axios.post('http://localhost:8888/api/create', { task });
+		const res = await axios.post('http://localhost:8888/api/createTask', {
+			task
+		});
 		this.setState(prevState => ({ tasks: [...prevState.tasks, res.data] }));
 	};
 

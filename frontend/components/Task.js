@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 import ProgressForm from './ProgressForm';
 
 const TaskHeader = styled.div`
@@ -62,8 +63,19 @@ class Task extends Component {
 		}));
 	};
 
-	addProgress = (units, description) => {
-		console.log(units, description);
+	addProgress = async (units, description) => {
+		const taskPromise = axios.post('http://localhost:8888/api/addSegments', {
+			finishedUnits: units,
+			task: this.props.task._id
+		});
+		const segmentPromise = axios.post(
+			'http://localhost:8888/api/createSegment',
+			{
+				units,
+				description
+			}
+		);
+		const [task, segment] = await Promise.all([taskPromise, segmentPromise]);
 		this.toggleForm();
 	};
 

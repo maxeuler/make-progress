@@ -11,3 +11,11 @@ exports.getTasks = async (req, res) => {
 	const tasks = await Task.find();
 	res.json(tasks);
 };
+
+exports.addSegments = async (req, res) => {
+	const task = await Task.findOneAndUpdate({ _id: req.body.task }, req.body, {
+		new: true,
+		runValidators: true
+	}).exec();
+	res.json(task);
+};

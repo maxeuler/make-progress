@@ -13,6 +13,13 @@ const taskSchema = new mongoose.Schema({
 		type: Number,
 		required: 'You have to provide a number of units!',
 		min: 1
+	},
+	finishedUnits: {
+		type: Number,
+		default: 0
+	},
+	segments: {
+		type: [mongoose.Schema.Types.ObjectId]
 	}
 });
 
