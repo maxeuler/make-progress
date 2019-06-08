@@ -13,9 +13,8 @@ exports.getTasks = async (req, res) => {
 };
 
 exports.addSegments = async (req, res) => {
-	const task = await Task.findOneAndUpdate({ _id: req.body.task }, req.body, {
-		new: true,
-		runValidators: true
-	}).exec();
-	res.json(task);
+	const task = await Task.findOne({ _id: req.body.task });
+	task.finishedUnits = task.finishedUnits + req.body.finishedUnits;
+	const updatedTask = await task.save();
+	res.json(updatedTask);
 };

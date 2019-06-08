@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import ProgressForm from './ProgressForm';
+import ProgressBar from './ProgressBar';
 
 const TaskHeader = styled.div`
 	width: 90%;
@@ -26,14 +27,6 @@ const Progress = styled.div`
 	height: 50px;
 	justify-content: space-between;
 	align-items: center;
-`;
-
-const ProgressBar = styled.div`
-	display: block;
-	width: 90%;
-	height: 40px;
-	background: ${props => props.theme.bright};
-	border-radius: 4px;
 `;
 
 const AddButton = styled.button`
@@ -64,6 +57,10 @@ class Task extends Component {
 	};
 
 	addProgress = async (units, description) => {
+		const { task } = this.props;
+		if (task.finishedUnits + units > task.units) {
+			units = task.units - task.finishedUnits;
+		}
 		const taskPromise = axios.post('http://localhost:8888/api/addSegments', {
 			finishedUnits: units,
 			task: this.props.task._id
@@ -75,7 +72,11 @@ class Task extends Component {
 				description
 			}
 		);
-		const [task, segment] = await Promise.all([taskPromise, segmentPromise]);
+		const [taskRes, segmentRes] = await Promise.all([
+			taskPromise,
+			segmentPromise
+		]);
+		this.props.task.finishedUnits = taskRes.data.finishedUnits;
 		this.toggleForm();
 	};
 
@@ -86,14 +87,16 @@ class Task extends Component {
 				<TaskHeader>
 					<p id="title">{task.title}</p>
 					<p>
-						4 von {task.units} {task.unit}
+						{task.finishedUnits} von {task.units} {task.unit}
 					</p>
 				</TaskHeader>
 				<Progress>
-					<ProgressBar />
+					<ProgressBar finishedUnits={task.finishedUnits} units={task.units} />
 					<AddButton onClick={this.toggleForm}>+</AddButton>
 				</Progress>
-				{this.state.showForm && <ProgressForm addProgress={this.addProgress} />}
+				{this.state.showForm && (
+					<ProgressForm addProgress={this.addProgress} task={task} />
+				)}
 			</StyledTask>
 		);
 	}

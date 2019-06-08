@@ -52,6 +52,7 @@ class ProgressForm extends Component {
 	};
 
 	render() {
+		const { task } = this.props;
 		return (
 			<Form
 				method="POST"
@@ -71,6 +72,8 @@ class ProgressForm extends Component {
 						type="number"
 						onChange={this.handleChange}
 						value={this.state.units}
+						min={0 - task.finishedUnits}
+						max={task.units - task.finishedUnits}
 					/>
 				</label>
 				<label htmlFor="description">

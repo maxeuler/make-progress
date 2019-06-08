@@ -5,10 +5,7 @@ const segmentSchema = new mongoose.Schema({
 		type: Number,
 		required: 'You have to provide a count of units!'
 	},
-	description: {
-		type: String,
-		required: 'You have to provide a description'
-	}
+	description: String
 });
 
 module.exports = new mongoose.model('Segment', segmentSchema);
