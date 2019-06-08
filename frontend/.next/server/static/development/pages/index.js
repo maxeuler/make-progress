@@ -509,27 +509,30 @@ function (_Component) {
                   units = task.units - task.finishedUnits;
                 }
 
+                _this.props.task.finishedUnits = task.finishedUnits + units;
+
+                _this.toggleForm();
+
                 taskPromise = axios__WEBPACK_IMPORTED_MODULE_14___default.a.post('http://localhost:8888/api/addSegments', {
                   finishedUnits: units,
                   task: _this.props.task._id
                 });
+                console.log(task);
                 segmentPromise = axios__WEBPACK_IMPORTED_MODULE_14___default.a.post('http://localhost:8888/api/createSegment', {
                   units: units,
-                  description: description
+                  description: description,
+                  task: task._id
                 });
-                _context.next = 6;
+                _context.next = 9;
                 return _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default.a.all([taskPromise, segmentPromise]);
 
-              case 6:
+              case 9:
                 _ref2 = _context.sent;
                 _ref3 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_ref2, 2);
                 taskRes = _ref3[0];
                 segmentRes = _ref3[1];
-                _this.props.task.finishedUnits = taskRes.data.finishedUnits;
 
-                _this.toggleForm();
-
-              case 12:
+              case 13:
               case "end":
                 return _context.stop();
             }
@@ -552,32 +555,32 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(StyledTask, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 90
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(TaskHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 91
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 92
         },
         __self: this
       }, task.title), react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 93
         },
         __self: this
       }, task.finishedUnits, " von ", task.units, " ", task.unit)), react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(Progress, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 97
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(_ProgressBar__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -585,14 +588,14 @@ function (_Component) {
         units: task.units,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 98
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(AddButton, {
+      }), task.finishedUnits !== task.units && react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(AddButton, {
         onClick: this.toggleForm,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 100
         },
         __self: this
       }, "+")), this.state.showForm && react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(_ProgressForm__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -600,7 +603,7 @@ function (_Component) {
         task: task,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 104
         },
         __self: this
       }));

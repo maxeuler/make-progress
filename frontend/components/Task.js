@@ -61,23 +61,27 @@ class Task extends Component {
 		if (task.finishedUnits + units > task.units) {
 			units = task.units - task.finishedUnits;
 		}
+		this.props.task.finishedUnits = task.finishedUnits + units;
+		this.toggleForm();
+
 		const taskPromise = axios.post('http://localhost:8888/api/addSegments', {
 			finishedUnits: units,
 			task: this.props.task._id
 		});
+		console.log(task);
 		const segmentPromise = axios.post(
 			'http://localhost:8888/api/createSegment',
 			{
 				units,
-				description
+				description,
+				task: task._id
 			}
 		);
 		const [taskRes, segmentRes] = await Promise.all([
 			taskPromise,
 			segmentPromise
 		]);
-		this.props.task.finishedUnits = taskRes.data.finishedUnits;
-		this.toggleForm();
+		// TODO handle errors
 	};
 
 	render() {
@@ -92,7 +96,9 @@ class Task extends Component {
 				</TaskHeader>
 				<Progress>
 					<ProgressBar finishedUnits={task.finishedUnits} units={task.units} />
-					<AddButton onClick={this.toggleForm}>+</AddButton>
+					{task.finishedUnits !== task.units && (
+						<AddButton onClick={this.toggleForm}>+</AddButton>
+					)}
 				</Progress>
 				{this.state.showForm && (
 					<ProgressForm addProgress={this.addProgress} task={task} />
