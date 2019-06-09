@@ -295,6 +295,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _ProgressForm__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./ProgressForm */ "./components/ProgressForm.js");
 /* harmony import */ var _ProgressBar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./ProgressBar */ "./components/ProgressBar.js");
+/* harmony import */ var _TaskDetails__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./TaskDetails */ "./components/TaskDetails.js");
 
 
 
@@ -330,7 +331,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_11__["default"])(["\n\tdisplay: flex;\n\theight: 50px;\n\tjustify-content: space-between;\n\talign-items: center;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_11__["default"])(["\n\tdisplay: flex;\n\theight: 50px;\n\tjustify-content: space-between;\n\talign-items: center;\n\tcursor: pointer;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -340,7 +341,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_11__["default"])(["\n\twidth: 90%;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: space-between;\n\tp {\n\t\tcolor: ", ";\n\t\tpadding: 0;\n\t\tmargin: 0;\n\t\tfont-size: 2rem;\n\t\tfont-weight: 300;\n\t}\n\t#title {\n\t\tfont-size: 3rem;\n\t\tfont-weight: 400;\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_11__["default"])(["\n\twidth: 90%;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: space-between;\n\tcursor: pointer;\n\tp {\n\t\tcolor: ", ";\n\t\tpadding: 0;\n\t\tmargin: 0;\n\t\tfont-size: 2rem;\n\t\tfont-weight: 300;\n\t}\n\t#title {\n\t\tfont-size: 3rem;\n\t\tfont-weight: 400;\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -348,6 +349,7 @@ function _templateObject() {
 
   return data;
 }
+
 
 
 
@@ -384,7 +386,9 @@ function (_Component) {
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__["default"])(Task)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_10__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this), "state", {
-      showForm: false
+      showForm: false,
+      showDetails: false,
+      segments: _this.props.task.segments
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_10__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this), "toggleForm", function () {
@@ -401,7 +405,7 @@ function (_Component) {
       var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(units, description) {
-        var task, taskPromise, segmentPromise, _ref2, _ref3, taskRes, segmentRes;
+        var task, taskPromise, segmentPromise, _ref2, _ref3, taskRes, segmentRes, updatedSegments;
 
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -421,22 +425,29 @@ function (_Component) {
                   finishedUnits: units,
                   task: _this.props.task._id
                 });
-                console.log(task);
                 segmentPromise = axios__WEBPACK_IMPORTED_MODULE_14___default.a.post('http://localhost:8888/api/createSegment', {
                   units: units,
                   description: description,
                   task: task._id
                 });
-                _context.next = 9;
+                _context.next = 8;
                 return _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default.a.all([taskPromise, segmentPromise]);
 
-              case 9:
+              case 8:
                 _ref2 = _context.sent;
                 _ref3 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_ref2, 2);
                 taskRes = _ref3[0];
                 segmentRes = _ref3[1];
+                console.log(segmentRes);
+                updatedSegments = _this.state.segments.push(segmentRes.data);
+                console.log(updatedSegments);
 
-              case 13:
+                _this.setState({
+                  segments: updatedSegments
+                }); // TODO handle errors
+
+
+              case 16:
               case "end":
                 return _context.stop();
             }
@@ -449,6 +460,16 @@ function (_Component) {
       };
     }());
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_10__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this), "toggleDetails", function (e) {
+      if (e.target.name === 'addButton') return;
+
+      _this.setState(function (prevState) {
+        return {
+          showDetails: !prevState.showDetails
+        };
+      });
+    });
+
     return _this;
   }
 
@@ -456,35 +477,38 @@ function (_Component) {
     key: "render",
     value: function render() {
       var task = this.props.task;
+      console.log(this.state.segments);
       return react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(StyledTask, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 111
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(TaskHeader, {
+        onClick: this.toggleDetails,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 112
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 113
         },
         __self: this
       }, task.title), react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 114
         },
         __self: this
       }, task.finishedUnits, " von ", task.units, " ", task.unit)), react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(Progress, {
+        onClick: this.toggleDetails,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 118
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(_ProgressBar__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -492,14 +516,15 @@ function (_Component) {
         units: task.units,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 119
         },
         __self: this
       }), task.finishedUnits !== task.units && react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(AddButton, {
+        name: "addButton",
         onClick: this.toggleForm,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 121
         },
         __self: this
       }, "+")), this.state.showForm && react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(_ProgressForm__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -507,7 +532,15 @@ function (_Component) {
         task: task,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 127
+        },
+        __self: this
+      }), this.state.showDetails && react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(_TaskDetails__WEBPACK_IMPORTED_MODULE_17__["default"], {
+        segments: this.state.segments,
+        unit: task.unit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
         },
         __self: this
       }));
@@ -518,6 +551,101 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_12__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Task);
+
+/***/ }),
+
+/***/ "./components/TaskDetails.js":
+/*!***********************************!*\
+  !*** ./components/TaskDetails.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+
+
+
+
+var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/TaskDetails.js";
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\tbackground: ", ";\n\tcolor: ", ";\n\tfont-size: 2rem;\n\twidth: 90%;\n\tlist-style: none;\n\tpadding: 2rem;\n\tpadding-left: 6rem;\n\tspan {\n\t\tmargin-right: 2rem;\n\t}\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+var DetailsList = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].ul(_templateObject(), function (props) {
+  return props.theme.bright;
+}, function (props) {
+  return props.theme.dark;
+});
+
+var TaskDetails =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(TaskDetails, _Component);
+
+  function TaskDetails() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, TaskDetails);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(TaskDetails).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(TaskDetails, [{
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(DetailsList, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, this.props.segments.map(function (segment) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+          key: segment._id,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          },
+          __self: this
+        }, segment.units, ' ', segment.units == 1 ? _this.props.unit.slice(0, -1) : _this.props.unit), segment.description);
+      }));
+    }
+  }]);
+
+  return TaskDetails;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (TaskDetails);
 
 /***/ }),
 

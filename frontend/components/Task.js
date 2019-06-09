@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import axios from 'axios';
 import ProgressForm from './ProgressForm';
 import ProgressBar from './ProgressBar';
+import TaskDetails from './TaskDetails';
 
 const TaskHeader = styled.div`
 	width: 90%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	cursor: pointer;
 	p {
 		color: ${props => props.theme.bright};
 		padding: 0;
@@ -27,6 +29,7 @@ const Progress = styled.div`
 	height: 50px;
 	justify-content: space-between;
 	align-items: center;
+	cursor: pointer;
 `;
 
 const AddButton = styled.button`
@@ -47,8 +50,15 @@ const StyledTask = styled.div`
 
 class Task extends Component {
 	state = {
-		showForm: false
+		showForm: false,
+		showDetails: false,
+		segments: this.props.task.segments
 	};
+
+	// componentDidMount() {
+	// 	this.setState({ segments: this.props.task.segments });
+	// 	console.log(this.state.segments);
+	// }
 
 	toggleForm = () => {
 		this.setState(prevState => ({
@@ -68,7 +78,6 @@ class Task extends Component {
 			finishedUnits: units,
 			task: this.props.task._id
 		});
-		console.log(task);
 		const segmentPromise = axios.post(
 			'http://localhost:8888/api/createSegment',
 			{
@@ -81,27 +90,44 @@ class Task extends Component {
 			taskPromise,
 			segmentPromise
 		]);
+		console.log(segmentRes);
+		const updatedSegments = this.state.segments.push(segmentRes.data);
+		console.log(updatedSegments);
+		this.setState({
+			segments: updatedSegments
+		});
 		// TODO handle errors
+	};
+
+	toggleDetails = e => {
+		if (e.target.name === 'addButton') return;
+		this.setState(prevState => ({ showDetails: !prevState.showDetails }));
 	};
 
 	render() {
 		const { task } = this.props;
+		console.log(this.state.segments);
 		return (
 			<StyledTask>
-				<TaskHeader>
+				<TaskHeader onClick={this.toggleDetails}>
 					<p id="title">{task.title}</p>
 					<p>
 						{task.finishedUnits} von {task.units} {task.unit}
 					</p>
 				</TaskHeader>
-				<Progress>
+				<Progress onClick={this.toggleDetails}>
 					<ProgressBar finishedUnits={task.finishedUnits} units={task.units} />
 					{task.finishedUnits !== task.units && (
-						<AddButton onClick={this.toggleForm}>+</AddButton>
+						<AddButton name="addButton" onClick={this.toggleForm}>
+							+
+						</AddButton>
 					)}
 				</Progress>
 				{this.state.showForm && (
 					<ProgressForm addProgress={this.addProgress} task={task} />
+				)}
+				{this.state.showDetails && (
+					<TaskDetails segments={this.state.segments} unit={task.unit} />
 				)}
 			</StyledTask>
 		);
