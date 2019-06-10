@@ -8,8 +8,19 @@ exports.createTask = async (req, res) => {
 };
 
 exports.getTasks = async (req, res) => {
-	const tasks = await Task.find();
+	const tasks = await Task.find().populate({
+		path: 'segments',
+		model: 'Segment'
+	});
 	res.json(tasks);
+};
+
+exports.getTaskDetails = async (req, res) => {
+	const task = await Task.findOne({ _id: req.params.id }).populate({
+		path: 'segments',
+		model: 'Segment'
+	});
+	res.json(task);
 };
 
 exports.addSegments = async (req, res) => {

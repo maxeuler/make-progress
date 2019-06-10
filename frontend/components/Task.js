@@ -55,11 +55,6 @@ class Task extends Component {
 		segments: this.props.task.segments
 	};
 
-	// componentDidMount() {
-	// 	this.setState({ segments: this.props.task.segments });
-	// 	console.log(this.state.segments);
-	// }
-
 	toggleForm = () => {
 		this.setState(prevState => ({
 			showForm: !prevState.showForm
@@ -90,9 +85,10 @@ class Task extends Component {
 			taskPromise,
 			segmentPromise
 		]);
-		console.log(segmentRes);
-		const updatedSegments = this.state.segments.push(segmentRes.data);
-		console.log(updatedSegments);
+		const updatedSegments = [
+			...this.state.segments,
+			Object.assign({}, segmentRes.data)
+		];
 		this.setState({
 			segments: updatedSegments
 		});

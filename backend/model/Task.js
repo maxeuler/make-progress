@@ -19,7 +19,8 @@ const taskSchema = new mongoose.Schema({
 		default: 0
 	},
 	segments: {
-		type: [mongoose.Schema.Types.ObjectId]
+		type: [mongoose.Schema.ObjectId],
+		ref: 'Segment'
 	}
 });
 
