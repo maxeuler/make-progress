@@ -10,7 +10,7 @@ const TaskHeader = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	cursor: pointer;
+	margin: 1rem 0;
 	p {
 		color: ${props => props.theme.bright};
 		padding: 0;
@@ -29,7 +29,6 @@ const Progress = styled.div`
 	height: 50px;
 	justify-content: space-between;
 	align-items: center;
-	cursor: pointer;
 `;
 
 const AddButton = styled.button`
@@ -46,6 +45,16 @@ const AddButton = styled.button`
 
 const StyledTask = styled.div`
 	margin: 2rem 0;
+`;
+
+const DetailsButton = styled.button`
+	background: none;
+	border: 1px solid ${props => props.theme.bright};
+	border-radius: 3px;
+	color: ${props => props.theme.bright};
+	margin-left: 2rem;
+	font-size: 1.5rem;
+	cursor: pointer;
 `;
 
 class Task extends Component {
@@ -96,22 +105,25 @@ class Task extends Component {
 	};
 
 	toggleDetails = e => {
-		if (e.target.name === 'addButton') return;
 		this.setState(prevState => ({ showDetails: !prevState.showDetails }));
 	};
 
 	render() {
 		const { task } = this.props;
-		console.log(this.state.segments);
 		return (
 			<StyledTask>
-				<TaskHeader onClick={this.toggleDetails}>
-					<p id="title">{task.title}</p>
+				<TaskHeader>
+					<span style={{ display: 'flex' }}>
+						<p id="title">{task.title}</p>
+						<DetailsButton onClick={this.toggleDetails}>
+							Show Details
+						</DetailsButton>
+					</span>
 					<p>
 						{task.finishedUnits} von {task.units} {task.unit}
 					</p>
 				</TaskHeader>
-				<Progress onClick={this.toggleDetails}>
+				<Progress>
 					<ProgressBar finishedUnits={task.finishedUnits} units={task.units} />
 					{task.finishedUnits !== task.units && (
 						<AddButton name="addButton" onClick={this.toggleForm}>
@@ -122,9 +134,14 @@ class Task extends Component {
 				{this.state.showForm && (
 					<ProgressForm addProgress={this.addProgress} task={task} />
 				)}
-				{this.state.showDetails && (
-					<TaskDetails segments={this.state.segments} unit={task.unit} />
-				)}
+				{this.state.showDetails &&
+					(this.state.segments.length ? (
+						<TaskDetails segments={this.state.segments} unit={task.unit} />
+					) : (
+						<TaskHeader>
+							<p id="title">You have to do something first 🏌🏼‍</p>
+						</TaskHeader>
+					))}
 			</StyledTask>
 		);
 	}

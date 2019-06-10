@@ -411,6 +411,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Task.js";
 
+function _templateObject5() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tbackground: none;\n\tborder: 1px solid ", ";\n\tborder-radius: 3px;\n\tcolor: ", ";\n\tmargin-left: 2rem;\n\tfont-size: 1.5rem;\n\tcursor: pointer;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject4() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tmargin: 2rem 0;\n"]);
 
@@ -432,7 +442,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tdisplay: flex;\n\theight: 50px;\n\tjustify-content: space-between;\n\talign-items: center;\n\tcursor: pointer;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tdisplay: flex;\n\theight: 50px;\n\tjustify-content: space-between;\n\talign-items: center;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -442,7 +452,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\twidth: 90%;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: space-between;\n\tcursor: pointer;\n\tp {\n\t\tcolor: ", ";\n\t\tpadding: 0;\n\t\tmargin: 0;\n\t\tfont-size: 2rem;\n\t\tfont-weight: 300;\n\t}\n\t#title {\n\t\tfont-size: 3rem;\n\t\tfont-weight: 400;\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\twidth: 90%;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: space-between;\n\tmargin: 1rem 0;\n\tp {\n\t\tcolor: ", ";\n\t\tpadding: 0;\n\t\tmargin: 0;\n\t\tfont-size: 2rem;\n\t\tfont-weight: 300;\n\t}\n\t#title {\n\t\tfont-size: 3rem;\n\t\tfont-weight: 400;\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -467,6 +477,11 @@ var AddButton = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.button
   return props.theme.bright;
 });
 var StyledTask = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.div(_templateObject4());
+var DetailsButton = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.button(_templateObject5(), function (props) {
+  return props.theme.bright;
+}, function (props) {
+  return props.theme.bright;
+});
 
 var Task =
 /*#__PURE__*/
@@ -560,8 +575,6 @@ function (_Component) {
     }());
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_12__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_10__["default"])(_this), "toggleDetails", function (e) {
-      if (e.target.name === 'addButton') return;
-
       _this.setState(function (prevState) {
         return {
           showDetails: !prevState.showDetails
@@ -576,38 +589,51 @@ function (_Component) {
     key: "render",
     value: function render() {
       var task = this.props.task;
-      console.log(this.state.segments);
       return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(StyledTask, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 114
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(TaskHeader, {
-        onClick: this.toggleDetails,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 115
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
+        style: {
+          display: 'flex'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 117
         },
         __self: this
-      }, task.title), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 110
-        },
-        __self: this
-      }, task.finishedUnits, " von ", task.units, " ", task.unit)), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(Progress, {
+      }, task.title), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(DetailsButton, {
         onClick: this.toggleDetails,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 118
+        },
+        __self: this
+      }, "Show Details")), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122
+        },
+        __self: this
+      }, task.finishedUnits, " von ", task.units, " ", task.unit)), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(Progress, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_ProgressBar__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -615,7 +641,7 @@ function (_Component) {
         units: task.units,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 127
         },
         __self: this
       }), task.finishedUnits !== task.units && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(AddButton, {
@@ -623,7 +649,7 @@ function (_Component) {
         onClick: this.toggleForm,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 129
         },
         __self: this
       }, "+")), this.state.showForm && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_ProgressForm__WEBPACK_IMPORTED_MODULE_17__["default"], {
@@ -631,18 +657,31 @@ function (_Component) {
         task: task,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 135
         },
         __self: this
-      }), this.state.showDetails && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_TaskDetails__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      }), this.state.showDetails && (this.state.segments.length ? react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_TaskDetails__WEBPACK_IMPORTED_MODULE_19__["default"], {
         segments: this.state.segments,
         unit: task.unit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 139
         },
         __self: this
-      }));
+      }) : react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(TaskHeader, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 141
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
+        id: "title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142
+        },
+        __self: this
+      }, "You have to do something first \uD83C\uDFCC\uD83C\uDFFC\u200D"))));
     }
   }]);
 
@@ -737,7 +776,7 @@ function (_Component) {
             lineNumber: 24
           },
           __self: this
-        }, segment.units, ' ', segment.units == 1 ? _this.props.unit.slice(0, -1) : _this.props.unit), segment.description);
+        }, segment.units, ' ', segment.units == 1 && _this.props.unit.slice(-1) == 's' ? _this.props.unit.slice(0, -1) : _this.props.unit), segment.description);
       }));
     }
   }]);
@@ -949,6 +988,9 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        style: {
+          margin: '4rem 0'
+        },
         __source: {
           fileName: _jsxFileName,
           lineNumber: 8

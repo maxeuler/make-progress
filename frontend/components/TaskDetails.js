@@ -23,7 +23,7 @@ class TaskDetails extends Component {
 					<li key={segment._id}>
 						<span>
 							{segment.units}{' '}
-							{segment.units == 1
+							{segment.units == 1 && this.props.unit.slice(-1) == 's'
 								? this.props.unit.slice(0, -1)
 								: this.props.unit}
 						</span>
