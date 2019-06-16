@@ -29,3 +29,8 @@ exports.addSegments = async (req, res) => {
 	const updatedTask = await task.save();
 	res.json(updatedTask);
 };
+
+exports.deleteTask = async (req, res) => {
+	await Task.findOneAndDelete({ _id: req.body.id });
+	res.json({ success: 'true' });
+};

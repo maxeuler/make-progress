@@ -315,6 +315,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Task.js";
 
+function _templateObject6() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tbackground: none;\n\tborder: none;\n\tfont-size: 3rem;\n\tcolor: ", ";\n\tmargin-right: 1rem;\n\tcursor: pointer;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject5() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tbackground: none;\n\tborder: 1px solid ", ";\n\tborder-radius: 3px;\n\tcolor: ", ";\n\tmargin-left: 2rem;\n\tfont-size: 1.5rem;\n\tcursor: pointer;\n"]);
 
@@ -384,6 +394,9 @@ var StyledTask = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].div(
 var DetailsButton = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].button(_templateObject5(), function (props) {
   return props.theme.bright;
 }, function (props) {
+  return props.theme.bright;
+});
+var DeleteButton = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].button(_templateObject6(), function (props) {
   return props.theme.bright;
 });
 
@@ -492,17 +505,19 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_7__["default"])(Task, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var task = this.props.task;
       return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(StyledTask, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 123
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(TaskHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 124
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
@@ -511,33 +526,42 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 125
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(DeleteButton, {
+        onClick: function onClick() {
+          return _this2.props.delete(task._id);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 129
         },
         __self: this
       }, task.title), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(DetailsButton, {
         onClick: this.toggleDetails,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 130
         },
         __self: this
-      }, "Show Details")), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
+      }, this.state.showDetails ? 'Hide Details' : 'Show Details')), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 134
         },
         __self: this
       }, task.finishedUnits, " von ", task.units, " ", task.unit)), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(Progress, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 138
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_ProgressBar__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -545,7 +569,7 @@ function (_Component) {
         units: task.units,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 139
         },
         __self: this
       }), task.finishedUnits !== task.units && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(AddButton, {
@@ -553,7 +577,7 @@ function (_Component) {
         onClick: this.toggleForm,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 141
         },
         __self: this
       }, "+")), this.state.showForm && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_ProgressForm__WEBPACK_IMPORTED_MODULE_17__["default"], {
@@ -561,7 +585,7 @@ function (_Component) {
         task: task,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 147
         },
         __self: this
       }), this.state.showDetails && (this.state.segments.length ? react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_TaskDetails__WEBPACK_IMPORTED_MODULE_19__["default"], {
@@ -569,20 +593,20 @@ function (_Component) {
         unit: task.unit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 151
         },
         __self: this
       }) : react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(TaskHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 153
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 154
         },
         __self: this
       }, "You have to do something first \uD83C\uDFCC\uD83C\uDFFC\u200D"))));
@@ -625,7 +649,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/TaskDetails.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\tbackground: ", ";\n\tcolor: ", ";\n\tfont-size: 2rem;\n\twidth: 90%;\n\tlist-style: none;\n\tpadding: 2rem;\n\tpadding-left: 6rem;\n\tspan {\n\t\tmargin-right: 2rem;\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\tbackground: ", ";\n\tcolor: ", ";\n\tfont-size: 2rem;\n\tborder-radius: 3px;\n\twidth: 90%;\n\tlist-style: none;\n\tpadding: 2rem;\n\tpadding-left: 6rem;\n\tspan {\n\t\tmargin-right: 2rem;\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -662,7 +686,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(DetailsList, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         },
         __self: this
       }, this.props.segments.map(function (segment) {
@@ -670,13 +694,13 @@ function (_Component) {
           key: segment._id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 24
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 25
           },
           __self: this
         }, segment.units, ' ', segment.units == 1 && _this.props.unit.slice(-1) == 's' ? _this.props.unit.slice(0, -1) : _this.props.unit), segment.description);
@@ -890,22 +914,25 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Tasklist, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
           margin: '4rem 0'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 7
         },
         __self: this
       }, this.props.tasks.map(function (task) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Task__WEBPACK_IMPORTED_MODULE_6__["default"], {
           key: task._id,
           task: task,
+          delete: _this.props.delete,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 10
+            lineNumber: 9
           },
           __self: this
         });
@@ -1022,6 +1049,46 @@ function (_Component) {
       };
     }());
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "deleteTask",
+    /*#__PURE__*/
+    function () {
+      var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+      /*#__PURE__*/
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(id) {
+        var res;
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _this.setState(function (prevState) {
+                  return {
+                    tasks: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(prevState.tasks.filter(function (task) {
+                      return task._id !== id;
+                    }))
+                  };
+                });
+
+                _context2.next = 3;
+                return axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://localhost:8888/api/delete', {
+                  id: id
+                });
+
+              case 3:
+                res = _context2.sent;
+
+              case 4:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      return function (_x2) {
+        return _ref2.apply(this, arguments);
+      };
+    }());
+
     return _this;
   }
 
@@ -1030,17 +1097,17 @@ function (_Component) {
     value: function () {
       var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
-      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
         var res;
-        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context3.prev = _context3.next) {
               case 0:
-                _context2.next = 2;
+                _context3.next = 2;
                 return axios__WEBPACK_IMPORTED_MODULE_11___default.a.get('http://localhost:8888/api/tasks');
 
               case 2:
-                res = _context2.sent;
+                res = _context3.sent;
                 this.setState(function (prevState) {
                   return {
                     tasks: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(prevState.tasks), Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(res.data))
@@ -1049,10 +1116,10 @@ function (_Component) {
 
               case 4:
               case "end":
-                return _context2.stop();
+                return _context3.stop();
             }
           }
-        }, _callee2, this);
+        }, _callee3, this);
       }));
 
       function componentDidMount() {
@@ -1068,14 +1135,15 @@ function (_Component) {
         createTask: this.createTask,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 33
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_Tasklist__WEBPACK_IMPORTED_MODULE_12__["default"], {
         tasks: this.state.tasks,
+        delete: this.deleteTask,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 34
         },
         __self: this
       }));

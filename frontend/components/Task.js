@@ -57,6 +57,15 @@ const DetailsButton = styled.button`
 	cursor: pointer;
 `;
 
+const DeleteButton = styled.button`
+	background: none;
+	border: none;
+	font-size: 3rem;
+	color: ${props => props.theme.bright};
+	margin-right: 1rem;
+	cursor: pointer;
+`;
+
 class Task extends Component {
 	state = {
 		showForm: false,
@@ -114,9 +123,12 @@ class Task extends Component {
 			<StyledTask>
 				<TaskHeader>
 					<span style={{ display: 'flex' }}>
+						<DeleteButton onClick={() => this.props.delete(task._id)}>
+							&times;
+						</DeleteButton>
 						<p id="title">{task.title}</p>
 						<DetailsButton onClick={this.toggleDetails}>
-							Show Details
+							{this.state.showDetails ? 'Hide Details' : 'Show Details'}
 						</DetailsButton>
 					</span>
 					<p>

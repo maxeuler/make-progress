@@ -6,6 +6,7 @@ const DetailsList = styled.ul`
 	background: ${props => props.theme.bright};
 	color: ${props => props.theme.dark};
 	font-size: 2rem;
+	border-radius: 3px;
 	width: 90%;
 	list-style: none;
 	padding: 2rem;
