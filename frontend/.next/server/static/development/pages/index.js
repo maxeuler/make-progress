@@ -93,6 +93,132 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Auth.js":
+/*!****************************!*\
+  !*** ./components/Auth.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Signup__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Signup */ "./components/Signup.js");
+/* harmony import */ var _Signin__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Signin */ "./components/Signin.js");
+
+
+
+
+
+
+
+
+var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Auth.js";
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n  border: none;\n  background: none;\n  color: ", ";\n  margin: 2rem auto;\n  display: flex;\n  justify-self: center;\n  cursor: pointer;\n  font-size: 2rem;\n  outline: none;\n  :hover {\n    font-weight: 500;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.button(_templateObject(), function (props) {
+  return props.theme.bright;
+});
+
+var Auth =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Auth, _Component);
+
+  function Auth() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Auth);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Auth)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
+      hasAccount: false
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "toggleAccountState", function () {
+      _this.setState(function (prevState) {
+        return {
+          hasAccount: !prevState.hasAccount
+        };
+      });
+    });
+
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Auth, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, this.state.hasAccount ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Signin__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(ToggleButton, {
+        type: "button",
+        onClick: this.toggleAccountState,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      }, "Don't have an Account? \uD83D\uDC49\uD83C\uDFFC Sign Up")) : react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Signup__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(ToggleButton, {
+        type: "button",
+        onClick: this.toggleAccountState,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }, "Already have an Account? \uD83D\uDC49\uD83C\uDFFC Sign In")));
+    }
+  }]);
+
+  return Auth;
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Auth);
+
+/***/ }),
+
 /***/ "./components/ProgressBar.js":
 /*!***********************************!*\
   !*** ./components/ProgressBar.js ***!
@@ -227,7 +353,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/ProgressForm.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n\tdisplay: flex;\n\twidth: 90%;\n\tbackground: ", ";\n\tjustify-content: space-evenly;\n\talign-items: center;\n\tpadding: 2rem;\n\tborder-radius: 3px;\n\tmargin: 1rem 0;\n\tlabel {\n\t\tpadding: 0 1rem;\n\t\twidth: 80%;\n\t\tfont-size: 1.4rem;\n\t\tinput {\n\t\t\tdisplay: block;\n\t\t\tmargin: 0.5rem 0;\n\t\t\twidth: 90%;\n\t\t\tline-height: 2;\n\t\t\tborder: 1px solid ", ";\n\t\t\tborder-radius: 2px;\n\t\t\tfont-size: 1.5rem;\n\t\t}\n\t}\n\t#units {\n\t\twidth: 60px;\n\t}\n\tbutton {\n\t\twidth: 6rem;\n\t\tbackground: none;\n\t\tborder: 0;\n\t\tcolor: ", ";\n\t\tfont-size: 2rem;\n\t\tcursor: pointer;\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  display: flex;\n  width: 90%;\n  background: ", ";\n  justify-content: space-evenly;\n  align-items: center;\n  padding: 2rem;\n  border-radius: 3px;\n  margin: 1rem 0;\n  label {\n    padding: 0 1rem;\n    width: 80%;\n    font-size: 1.4rem;\n    input {\n      display: block;\n      margin: 0.5rem 0;\n      width: 90%;\n      line-height: 2;\n      border: 1px solid ", ";\n      border-radius: 2px;\n      font-size: 1.5rem;\n    }\n  }\n  #units {\n    width: 60px;\n  }\n  button {\n    width: 6rem;\n    background: none;\n    border: 0;\n    color: ", ";\n    font-size: 2rem;\n    cursor: pointer;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -297,7 +423,7 @@ function (_Component) {
               description = _this2$state.description; // if number field was empty units is NaN
           // we set it to 0
 
-          var validUnits = units ? units : 0;
+          var validUnits = units || 0;
 
           _this2.props.addProgress(validUnits, description);
         },
@@ -360,6 +486,244 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./components/Signin.js":
+/*!******************************!*\
+  !*** ./components/Signin.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _styles_Form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/Form */ "./components/styles/Form.js");
+
+
+
+
+
+var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Signin.js";
+
+
+
+var Signin =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Signin, _Component);
+
+  function Signin() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Signin);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Signin).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Signin, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_styles_Form__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        method: "POST",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        },
+        __self: this
+      }, "Sign In"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+        htmlFor: "email",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      }, "Email", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "email",
+        name: "email",
+        placeholder: "Email",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+        htmlFor: "password",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, "Password", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "password",
+        name: "password",
+        placeholder: "Password",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        type: "submit",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }, "Sign In"));
+    }
+  }]);
+
+  return Signin;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Signin);
+
+/***/ }),
+
+/***/ "./components/Signup.js":
+/*!******************************!*\
+  !*** ./components/Signup.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _styles_Form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/Form */ "./components/styles/Form.js");
+
+
+
+
+
+var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Signup.js";
+
+
+
+var Signup =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Signup, _Component);
+
+  function Signup() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Signup);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Signup).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Signup, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_styles_Form__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        method: "POST",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        },
+        __self: this
+      }, "Sign Up"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+        htmlFor: "email",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      }, "Email", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "email",
+        name: "email",
+        placeholder: "Email",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+        htmlFor: "username",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, "Username", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "text",
+        name: "username",
+        placeholder: "Username",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+        htmlFor: "password",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }, "Password", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "password",
+        name: "password",
+        placeholder: "Password",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+        htmlFor: "password-confirm",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, "Password", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+        type: "password",
+        name: "password-confirm",
+        placeholder: "Confirm password",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        type: "submit",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, "Sign Up"));
+    }
+  }]);
+
+  return Signup;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Signup);
+
+/***/ }),
+
 /***/ "./components/Task.js":
 /*!****************************!*\
   !*** ./components/Task.js ***!
@@ -412,7 +776,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Task.js";
 
 function _templateObject6() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tbackground: none;\n\tborder: none;\n\tfont-size: 3rem;\n\tcolor: ", ";\n\tmargin-right: 1rem;\n\tcursor: pointer;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  background: none;\n  border: none;\n  font-size: 3rem;\n  color: ", ";\n  margin-right: 1rem;\n  cursor: pointer;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -422,7 +786,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tbackground: none;\n\tborder: 1px solid ", ";\n\tborder-radius: 3px;\n\tcolor: ", ";\n\tmargin-left: 2rem;\n\tfont-size: 1.5rem;\n\tcursor: pointer;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  background: none;\n  border: 1px solid ", ";\n  border-radius: 3px;\n  color: ", ";\n  margin-left: 2rem;\n  font-size: 1.5rem;\n  cursor: pointer;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -432,7 +796,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tmargin: 2rem 0;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  margin: 2rem 0;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -442,7 +806,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\twidth: 40px;\n\theight: 40px;\n\tmargin-right: 4rem;\n\tbackground: none;\n\tborder: 1px solid ", ";\n\tborder-radius: 20px;\n\tcolor: ", ";\n\tfont-size: 2rem;\n\tcursor: pointer;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  width: 40px;\n  height: 40px;\n  margin-right: 4rem;\n  background: none;\n  border: 1px solid ", ";\n  border-radius: 20px;\n  color: ", ";\n  font-size: 2rem;\n  cursor: pointer;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -452,7 +816,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\tdisplay: flex;\n\theight: 50px;\n\tjustify-content: space-between;\n\talign-items: center;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  display: flex;\n  height: 50px;\n  justify-content: space-between;\n  align-items: center;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -462,7 +826,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n\twidth: 90%;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: space-between;\n\tmargin: 1rem 0;\n\tp {\n\t\tcolor: ", ";\n\t\tpadding: 0;\n\t\tmargin: 0;\n\t\tfont-size: 2rem;\n\t\tfont-weight: 300;\n\t}\n\t#title {\n\t\tfont-size: 3rem;\n\t\tfont-weight: 400;\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  width: 90%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin: 1rem 0;\n  p {\n    color: ", ";\n    padding: 0;\n    margin: 0;\n    font-size: 2rem;\n    font-weight: 300;\n  }\n  #title {\n    font-size: 3rem;\n    font-weight: 400;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -533,14 +897,15 @@ function (_Component) {
     function () {
       var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])(
       /*#__PURE__*/
-      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(units, description) {
-        var task, taskPromise, segmentPromise, _ref2, _ref3, taskRes, segmentRes, updatedSegments;
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(addedUnits, description) {
+        var task, units, taskPromise, segmentPromise, _ref2, _ref3, taskRes, segmentRes;
 
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 task = _this.props.task;
+                units = addedUnits;
 
                 if (task.finishedUnits + units > task.units) {
                   units = task.units - task.finishedUnits;
@@ -559,18 +924,19 @@ function (_Component) {
                   description: description,
                   task: task._id
                 });
-                _context.next = 8;
+                _context.next = 9;
                 return _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_3___default.a.all([taskPromise, segmentPromise]);
 
-              case 8:
+              case 9:
                 _ref2 = _context.sent;
                 _ref3 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref2, 2);
                 taskRes = _ref3[0];
                 segmentRes = _ref3[1];
-                updatedSegments = [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_this.state.segments), [_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1___default()({}, segmentRes.data)]);
 
-                _this.setState({
-                  segments: updatedSegments
+                _this.setState(function (prevState) {
+                  return {
+                    segments: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(prevState.segments), [_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1___default()({}, segmentRes.data)])
+                  };
                 }); // TODO handle errors
 
 
@@ -607,13 +973,13 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(StyledTask, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 120
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(TaskHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 121
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
@@ -622,7 +988,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 122
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(DeleteButton, {
@@ -631,33 +997,33 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 123
         },
         __self: this
       }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 126
         },
         __self: this
       }, task.title), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(DetailsButton, {
         onClick: this.toggleDetails,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 127
         },
         __self: this
       }, this.state.showDetails ? 'Hide Details' : 'Show Details')), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 131
         },
         __self: this
       }, task.finishedUnits, " von ", task.units, " ", task.unit)), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(Progress, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 135
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_ProgressBar__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -665,7 +1031,7 @@ function (_Component) {
         units: task.units,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 136
         },
         __self: this
       }), task.finishedUnits !== task.units && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(AddButton, {
@@ -673,7 +1039,7 @@ function (_Component) {
         onClick: this.toggleForm,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 138
         },
         __self: this
       }, "+")), this.state.showForm && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_ProgressForm__WEBPACK_IMPORTED_MODULE_17__["default"], {
@@ -681,7 +1047,7 @@ function (_Component) {
         task: task,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 144
         },
         __self: this
       }), this.state.showDetails && (this.state.segments.length ? react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_TaskDetails__WEBPACK_IMPORTED_MODULE_19__["default"], {
@@ -689,20 +1055,20 @@ function (_Component) {
         unit: task.unit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 148
         },
         __self: this
       }) : react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(TaskHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 150
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 151
         },
         __self: this
       }, "You have to do something first \uD83C\uDFCC\uD83C\uDFFC\u200D"))));
@@ -1251,6 +1617,42 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_10__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (TasksView);
+
+/***/ }),
+
+/***/ "./components/styles/Form.js":
+/*!***********************************!*\
+  !*** ./components/styles/Form.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  padding: 3rem;\n  max-width: 900px;\n  margin: 0 auto;\n  margin-top: 4rem;\n  border-radius: 3px;\n  label {\n    margin: 2rem 0;\n    display: block;\n    font-size: 2rem;\n  }\n  input {\n    width: 100%;\n    font-size: 1.6rem;\n    padding: 0.25rem 0.5rem;\n    margin: 0.25rem 0;\n    line-height: 2;\n    border-radius: 3px;\n    border: none;\n  }\n  h3 {\n    font-size: 5rem;\n    margin: 0;\n    text-align: right;\n  }\n  button {\n    font-size: 2rem;\n    padding: 1rem;\n    border: none;\n    border-radius: 3px;\n    background: ", ";\n    color: ", ";\n    opacity: 0.95;\n    width: 100%;\n    margin-top: 1rem;\n    cursor: pointer;\n    :hover {\n      opacity: 1;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.form(_templateObject(), function (props) {
+  return props.theme.bright;
+}, function (props) {
+  return props.theme.dark;
+}, function (props) {
+  return props.theme.bright;
+});
+/* harmony default export */ __webpack_exports__["default"] = (Form);
 
 /***/ }),
 
@@ -1949,15 +2351,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_TasksView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/TasksView */ "./components/TasksView.js");
+/* harmony import */ var _components_Auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Auth */ "./components/Auth.js");
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/pages/index.js";
 
 
 
+
 var Home = function Home(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TasksView__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Auth__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 7
     },
     __self: this
   }));

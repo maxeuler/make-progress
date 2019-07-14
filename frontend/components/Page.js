@@ -19,25 +19,25 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Inner = styled.div`
-	width: 80%;
-	max-width: 1300px;
-	margin: 0 auto;
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
 `;
 
 const theme = {
-	dark: '#2c3e50',
-	bright: '#ecf0f1',
-	border: '#ededed'
+  dark: '#2c3e50',
+  bright: '#ecf0f1',
+  border: '#ededed',
 };
 
 const Page = props => (
-	<ThemeProvider theme={theme}>
-		<React.Fragment>
-			<GlobalStyle />
-			<Header />
-			<Inner>{props.children}</Inner>
-		</React.Fragment>
-	</ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <React.Fragment>
+      <GlobalStyle />
+      <Header />
+      <Inner>{props.children}</Inner>
+    </React.Fragment>
+  </ThemeProvider>
 );
 
 export default Page;

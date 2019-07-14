@@ -204,7 +204,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Page.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n\twidth: 80%;\n\tmax-width: 1300px;\n\tmargin: 0 auto;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  width: 80%;\n  max-width: 1300px;\n  margin: 0 auto;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
