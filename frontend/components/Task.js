@@ -11,8 +11,8 @@ const TaskHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 1rem 0;
+  color: #222;
   p {
-    color: ${props => props.theme.bright};
     padding: 0;
     margin: 0;
     font-size: 2rem;
@@ -36,10 +36,11 @@ const AddButton = styled.button`
   height: 40px;
   margin-right: 4rem;
   background: none;
-  border: 1px solid ${props => props.theme.bright};
+  border: 1px solid ${props => props.theme.primary};
   border-radius: 20px;
-  color: ${props => props.theme.bright};
+  color: ${props => props.theme.primary};
   font-size: 2rem;
+  outline: none;
   cursor: pointer;
 `;
 
@@ -49,11 +50,12 @@ const StyledTask = styled.div`
 
 const DetailsButton = styled.button`
   background: none;
-  border: 1px solid ${props => props.theme.bright};
+  border: 1px solid ${props => props.theme.primary};
   border-radius: 3px;
-  color: ${props => props.theme.bright};
+  color: ${props => props.theme.primary};
   margin-left: 2rem;
   font-size: 1.5rem;
+  outline: none;
   cursor: pointer;
 `;
 
@@ -61,7 +63,7 @@ const DeleteButton = styled.button`
   background: none;
   border: none;
   font-size: 3rem;
-  color: ${props => props.theme.bright};
+  color: ${props => props.theme.primary};
   margin-right: 1rem;
   cursor: pointer;
 `;

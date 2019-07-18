@@ -127,7 +127,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Auth.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n  border: none;\n  background: none;\n  color: ", ";\n  margin: 2rem auto;\n  display: flex;\n  justify-self: center;\n  cursor: pointer;\n  font-size: 2rem;\n  outline: none;\n  :hover {\n    font-weight: 500;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n  border: none;\n  background: none;\n  color: #fff;\n  margin: 2rem auto;\n  display: flex;\n  justify-self: center;\n  cursor: pointer;\n  font-size: 2rem;\n  outline: none;\n  :hover {\n    font-weight: 500;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -140,9 +140,7 @@ function _templateObject() {
 
 
 
-var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.button(_templateObject(), function (props) {
-  return props.theme.bright;
-});
+var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.button(_templateObject());
 
 var Auth =
 /*#__PURE__*/
@@ -247,7 +245,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/ProgressBar.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\theight: 100%;\n\tborder-radius: 4px;\n\tbackground: #c0392b;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n  height: 100%;\n  border-radius: 4px;\n  background: #c0392b;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -257,7 +255,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\tdisplay: block;\n\twidth: 90%;\n\theight: 40px;\n\tbackground: ", ";\n\tborder-radius: 4px;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n  display: block;\n  width: 90%;\n  height: 40px;\n  background: #ddd;\n  border-radius: 4px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -268,9 +266,7 @@ function _templateObject() {
 
 
 
-var SytledProgressBar = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject(), function (props) {
-  return props.theme.bright;
-});
+var SytledProgressBar = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject());
 var InnerBar = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject2());
 
 var ProgressBar =
@@ -353,7 +349,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/ProgressForm.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  display: flex;\n  width: 90%;\n  background: ", ";\n  justify-content: space-evenly;\n  align-items: center;\n  padding: 2rem;\n  border-radius: 3px;\n  margin: 1rem 0;\n  label {\n    padding: 0 1rem;\n    width: 80%;\n    font-size: 1.4rem;\n    input {\n      display: block;\n      margin: 0.5rem 0;\n      width: 90%;\n      line-height: 2;\n      border: 1px solid ", ";\n      border-radius: 2px;\n      font-size: 1.5rem;\n    }\n  }\n  #units {\n    width: 60px;\n  }\n  button {\n    width: 6rem;\n    background: none;\n    border: 0;\n    color: ", ";\n    font-size: 2rem;\n    cursor: pointer;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  display: flex;\n  width: 90%;\n  background: #fff;\n  border: 1px solid #ddd;\n  justify-content: space-evenly;\n  align-items: center;\n  padding: 2rem;\n  border-radius: 3px;\n  margin: 1rem 0;\n  label {\n    padding: 0 1rem;\n    width: 80%;\n    font-size: 1.4rem;\n    color: ", ";\n    input {\n      display: block;\n      margin: 0.5rem 0;\n      padding: 0.25rem;\n      width: 90%;\n      line-height: 2;\n      border: 1px solid #ddd;\n      border-radius: 2px;\n      font-size: 1.5rem;\n      outline: none;\n    }\n  }\n  #units {\n    width: 60px;\n  }\n  button {\n    width: 6rem;\n    background: none;\n    border: 0;\n    color: ", ";\n    font-size: 2rem;\n    cursor: pointer;\n    margin-right: 2rem;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -365,11 +361,9 @@ function _templateObject() {
 
 
 var Form = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.form(_templateObject(), function (props) {
-  return props.theme.bright;
+  return props.theme.primary;
 }, function (props) {
-  return props.theme.border;
-}, function (props) {
-  return props.theme.dark;
+  return props.theme.primary;
 });
 
 var ProgressForm =
@@ -429,14 +423,14 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 62
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", {
         htmlFor: "units",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 73
         },
         __self: this
       }, "Units", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
@@ -448,14 +442,14 @@ function (_Component) {
         max: task.units - task.finishedUnits,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 75
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("label", {
         htmlFor: "description",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 84
         },
         __self: this
       }, "Description", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
@@ -465,14 +459,14 @@ function (_Component) {
         value: this.state.description,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 86
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 93
         },
         __self: this
       }, "ADD"));
@@ -550,6 +544,7 @@ function (_Component) {
         type: "email",
         name: "email",
         placeholder: "Email",
+        required: true,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 11
@@ -566,6 +561,7 @@ function (_Component) {
         type: "password",
         name: "password",
         placeholder: "Password",
+        required: true,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
@@ -575,7 +571,7 @@ function (_Component) {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 22
         },
         __self: this
       }, "Sign In"));
@@ -653,6 +649,7 @@ function (_Component) {
         type: "email",
         name: "email",
         placeholder: "Email",
+        required: true,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 11
@@ -669,6 +666,7 @@ function (_Component) {
         type: "text",
         name: "username",
         placeholder: "Username",
+        required: true,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
@@ -685,6 +683,7 @@ function (_Component) {
         type: "password",
         name: "password",
         placeholder: "Password",
+        required: true,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 19
@@ -694,23 +693,24 @@ function (_Component) {
         htmlFor: "password-confirm",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 26
         },
         __self: this
       }, "Password", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         type: "password",
         name: "password-confirm",
         placeholder: "Confirm password",
+        required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 28
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 35
         },
         __self: this
       }, "Sign Up"));
@@ -786,7 +786,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  background: none;\n  border: 1px solid ", ";\n  border-radius: 3px;\n  color: ", ";\n  margin-left: 2rem;\n  font-size: 1.5rem;\n  cursor: pointer;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  background: none;\n  border: 1px solid ", ";\n  border-radius: 3px;\n  color: ", ";\n  margin-left: 2rem;\n  font-size: 1.5rem;\n  outline: none;\n  cursor: pointer;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -806,7 +806,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  width: 40px;\n  height: 40px;\n  margin-right: 4rem;\n  background: none;\n  border: 1px solid ", ";\n  border-radius: 20px;\n  color: ", ";\n  font-size: 2rem;\n  cursor: pointer;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  width: 40px;\n  height: 40px;\n  margin-right: 4rem;\n  background: none;\n  border: 1px solid ", ";\n  border-radius: 20px;\n  color: ", ";\n  font-size: 2rem;\n  outline: none;\n  cursor: pointer;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -826,7 +826,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  width: 90%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin: 1rem 0;\n  p {\n    color: ", ";\n    padding: 0;\n    margin: 0;\n    font-size: 2rem;\n    font-weight: 300;\n  }\n  #title {\n    font-size: 3rem;\n    font-weight: 400;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_13__["default"])(["\n  width: 90%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin: 1rem 0;\n  color: #222;\n  p {\n    padding: 0;\n    margin: 0;\n    font-size: 2rem;\n    font-weight: 300;\n  }\n  #title {\n    font-size: 3rem;\n    font-weight: 400;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -841,23 +841,21 @@ function _templateObject() {
 
 
 
-var TaskHeader = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.div(_templateObject(), function (props) {
-  return props.theme.bright;
-});
+var TaskHeader = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.div(_templateObject());
 var Progress = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.div(_templateObject2());
 var AddButton = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.button(_templateObject3(), function (props) {
-  return props.theme.bright;
+  return props.theme.primary;
 }, function (props) {
-  return props.theme.bright;
+  return props.theme.primary;
 });
 var StyledTask = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.div(_templateObject4());
 var DetailsButton = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.button(_templateObject5(), function (props) {
-  return props.theme.bright;
+  return props.theme.primary;
 }, function (props) {
-  return props.theme.bright;
+  return props.theme.primary;
 });
 var DeleteButton = styled_components__WEBPACK_IMPORTED_MODULE_15___default.a.button(_templateObject6(), function (props) {
-  return props.theme.bright;
+  return props.theme.primary;
 });
 
 var Task =
@@ -973,13 +971,13 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(StyledTask, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 122
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(TaskHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 123
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
@@ -988,7 +986,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 124
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(DeleteButton, {
@@ -997,33 +995,33 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 125
         },
         __self: this
       }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 128
         },
         __self: this
       }, task.title), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(DetailsButton, {
         onClick: this.toggleDetails,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 129
         },
         __self: this
       }, this.state.showDetails ? 'Hide Details' : 'Show Details')), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 133
         },
         __self: this
       }, task.finishedUnits, " von ", task.units, " ", task.unit)), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(Progress, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 137
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_ProgressBar__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -1031,7 +1029,7 @@ function (_Component) {
         units: task.units,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 138
         },
         __self: this
       }), task.finishedUnits !== task.units && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(AddButton, {
@@ -1039,7 +1037,7 @@ function (_Component) {
         onClick: this.toggleForm,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 140
         },
         __self: this
       }, "+")), this.state.showForm && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_ProgressForm__WEBPACK_IMPORTED_MODULE_17__["default"], {
@@ -1047,7 +1045,7 @@ function (_Component) {
         task: task,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 146
         },
         __self: this
       }), this.state.showDetails && (this.state.segments.length ? react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_TaskDetails__WEBPACK_IMPORTED_MODULE_19__["default"], {
@@ -1055,20 +1053,20 @@ function (_Component) {
         unit: task.unit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 150
         },
         __self: this
       }) : react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(TaskHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 152
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("p", {
         id: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 153
         },
         __self: this
       }, "You have to do something first \uD83C\uDFCC\uD83C\uDFFC\u200D"))));
@@ -1099,10 +1097,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -1112,7 +1108,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/TaskDetails.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\tbackground: ", ";\n\tcolor: ", ";\n\tfont-size: 2rem;\n\tborder-radius: 3px;\n\twidth: 90%;\n\tlist-style: none;\n\tpadding: 2rem;\n\tpadding-left: 6rem;\n\tspan {\n\t\tmargin-right: 2rem;\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n  background: #fff;\n  border: 1px solid #ddd;\n  color: ", ";\n  font-size: 2rem;\n  border-radius: 3px;\n  width: 90%;\n  list-style: none;\n  padding: 2rem;\n  padding-left: 6rem;\n  li {\n    display: grid;\n    grid-template-columns: 20% 80%;\n    p {\n      margin: 1rem 0;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1123,11 +1119,8 @@ function _templateObject() {
 
 
 
-
-var DetailsList = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.ul(_templateObject(), function (props) {
-  return props.theme.bright;
-}, function (props) {
-  return props.theme.dark;
+var DetailsList = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.ul(_templateObject(), function (props) {
+  return props.theme.primary;
 });
 
 var TaskDetails =
@@ -1149,7 +1142,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(DetailsList, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 26
         },
         __self: this
       }, this.props.segments.map(function (segment) {
@@ -1157,16 +1150,22 @@ function (_Component) {
           key: segment._id,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 28
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 29
           },
           __self: this
-        }, segment.units, ' ', segment.units == 1 && _this.props.unit.slice(-1) == 's' ? _this.props.unit.slice(0, -1) : _this.props.unit), segment.description);
+        }, segment.units, ' ', segment.units == 1 && _this.props.unit.slice(-1) == 's' ? _this.props.unit.slice(0, -1) : _this.props.unit), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35
+          },
+          __self: this
+        }, segment.description));
       }));
     }
   }]);
@@ -1196,9 +1195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _ProgressForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ProgressForm */ "./components/ProgressForm.js");
+/* harmony import */ var _ProgressForm__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ProgressForm */ "./components/ProgressForm.js");
 
 
 
@@ -1207,7 +1204,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/TaskForm.js";
-
 
 
 
@@ -1247,7 +1243,7 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_ProgressForm__WEBPACK_IMPORTED_MODULE_9__["Form"], {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_ProgressForm__WEBPACK_IMPORTED_MODULE_8__["Form"], {
         method: "POST",
         onSubmit: function onSubmit(e) {
           e.preventDefault();
@@ -1262,14 +1258,14 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 19
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         htmlFor: "title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }, "Title", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
@@ -1280,14 +1276,14 @@ function (_Component) {
         value: this.state.title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 29
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         htmlFor: "unit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 37
         },
         __self: this
       }, "Which Unit?", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
@@ -1298,14 +1294,14 @@ function (_Component) {
         value: this.state.unit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 39
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
         htmlFor: "units",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 47
         },
         __self: this
       }, "How many Units?", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
@@ -1316,14 +1312,14 @@ function (_Component) {
         value: this.state.units,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 49
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 57
         },
         __self: this
       }, "Create"));
@@ -1434,8 +1430,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_Tasklist__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Tasklist */ "./components/Tasklist.js");
-/* harmony import */ var _components_TaskForm__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/TaskForm */ "./components/TaskForm.js");
+/* harmony import */ var _Tasklist__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Tasklist */ "./components/Tasklist.js");
+/* harmony import */ var _TaskForm__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./TaskForm */ "./components/TaskForm.js");
 
 
 
@@ -1518,7 +1514,6 @@ function (_Component) {
       var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(id) {
-        var res;
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -1537,9 +1532,6 @@ function (_Component) {
                 });
 
               case 3:
-                res = _context2.sent;
-
-              case 4:
               case "end":
                 return _context2.stop();
             }
@@ -1594,14 +1586,14 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_TaskForm__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_TaskForm__WEBPACK_IMPORTED_MODULE_13__["default"], {
         createTask: this.createTask,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 33
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_Tasklist__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_Tasklist__WEBPACK_IMPORTED_MODULE_12__["default"], {
         tasks: this.state.tasks,
         delete: this.deleteTask,
         __source: {
@@ -1635,7 +1627,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  padding: 3rem;\n  max-width: 900px;\n  margin: 0 auto;\n  margin-top: 4rem;\n  border-radius: 3px;\n  label {\n    margin: 2rem 0;\n    display: block;\n    font-size: 2rem;\n  }\n  input {\n    width: 100%;\n    font-size: 1.6rem;\n    padding: 0.25rem 0.5rem;\n    margin: 0.25rem 0;\n    line-height: 2;\n    border-radius: 3px;\n    border: none;\n  }\n  h3 {\n    font-size: 5rem;\n    margin: 0;\n    text-align: right;\n  }\n  button {\n    font-size: 2rem;\n    padding: 1rem;\n    border: none;\n    border-radius: 3px;\n    background: ", ";\n    color: ", ";\n    opacity: 0.95;\n    width: 100%;\n    margin-top: 1rem;\n    cursor: pointer;\n    :hover {\n      opacity: 1;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #fff;\n  padding: 3rem;\n  max-width: 900px;\n  margin: 0 auto;\n  margin-top: 4rem;\n  border-radius: 3px;\n  label {\n    margin: 2rem 0;\n    display: block;\n    font-size: 2rem;\n  }\n  input {\n    width: 100%;\n    font-size: 1.6rem;\n    padding: 0.25rem 0.5rem;\n    margin: 0.25rem 0;\n    line-height: 2;\n    border-radius: 3px;\n    border: none;\n  }\n  h3 {\n    font-size: 5rem;\n    margin: 0;\n    text-align: right;\n  }\n  button {\n    font-size: 2rem;\n    padding: 1rem;\n    border: none;\n    border-radius: 3px;\n    background: ", ";\n    color: #fff;\n    opacity: 0.95;\n    width: 100%;\n    margin-top: 1rem;\n    cursor: pointer;\n    :hover {\n      opacity: 1;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1646,11 +1638,7 @@ function _templateObject() {
 
 
 var Form = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.form(_templateObject(), function (props) {
-  return props.theme.bright;
-}, function (props) {
-  return props.theme.dark;
-}, function (props) {
-  return props.theme.bright;
+  return props.theme.primary;
 });
 /* harmony default export */ __webpack_exports__["default"] = (Form);
 
@@ -2358,10 +2346,10 @@ var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/fron
 
 
 var Home = function Home(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Auth__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TasksView__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     },
     __self: this
   }));

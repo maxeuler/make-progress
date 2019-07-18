@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 		font-family: sans-serif;
-		background: #2c3e50;
+		background: #fff;
 	}
 `;
 
@@ -25,8 +25,7 @@ const Inner = styled.div`
 `;
 
 const theme = {
-  dark: '#2c3e50',
-  bright: '#ecf0f1',
+  primary: '#222',
   border: '#ededed',
 };
 

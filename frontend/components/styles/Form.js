@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Form = styled.form`
-  background: ${props => props.theme.bright};
+  background: #fff;
   padding: 3rem;
   max-width: 900px;
   margin: 0 auto;
@@ -31,8 +31,8 @@ const Form = styled.form`
     padding: 1rem;
     border: none;
     border-radius: 3px;
-    background: ${props => props.theme.dark};
-    color: ${props => props.theme.bright};
+    background: ${props => props.theme.primary};
+    color: #fff;
     opacity: 0.95;
     width: 100%;
     margin-top: 1rem;

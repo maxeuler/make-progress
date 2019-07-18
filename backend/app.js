@@ -14,13 +14,17 @@ app.use(bodyParser.json());
 app.use('/api', routes);
 
 require('dotenv').config({ path: 'variables.env' });
+
 mongoose.connect(process.env.DATABASE, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
+mongoose.connection.on('connected', () => {
+  console.log(`🏆  connected`);
+});
 mongoose.connection.on('error', err => {
-	console.log(`🚫  🙅  🚫  🙅  🚫  👉  ${err.message}`);
+  console.log(`🚫  🙅  🚫  🙅  🚫  👉  ${err.message}`);
 });
 
 app.set('port', process.env.PORT || 8888);
 const server = app.listen(app.get('port'), () => {
-	console.log(`Express running 👉  PORT ${server.address().port}`);
+  console.log(`Express running 👉  PORT ${server.address().port}`);
 });

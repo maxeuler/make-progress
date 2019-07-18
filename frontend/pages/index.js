@@ -3,8 +3,8 @@ import Auth from '../components/Auth';
 
 const Home = props => (
   <>
-    {/* <TasksView /> */}
-    <Auth></Auth>
+    <TasksView />
+    {/* <Auth></Auth> */}
   </>
 );
 

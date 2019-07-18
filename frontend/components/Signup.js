@@ -8,15 +8,20 @@ class Signup extends Component {
         <h3>Sign Up</h3>
         <label htmlFor="email">
           Email
-          <input type="email" name="email" placeholder="Email" />
+          <input type="email" name="email" placeholder="Email" required />
         </label>
         <label htmlFor="username">
           Username
-          <input type="text" name="username" placeholder="Username" />
+          <input type="text" name="username" placeholder="Username" required />
         </label>
         <label htmlFor="password">
           Password
-          <input type="password" name="password" placeholder="Password" />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
         </label>
         <label htmlFor="password-confirm">
           Password
@@ -24,6 +29,7 @@ class Signup extends Component {
             type="password"
             name="password-confirm"
             placeholder="Confirm password"
+            required
           />
         </label>
         <button type="submit">Sign Up</button>

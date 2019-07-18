@@ -27,7 +27,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Header.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\tdisplay: flex;\n\tjustify-content: space-between;\n\tpadding: 1rem 4rem;\n\tfont-size: 2rem;\n\tcolor: ", ";\n\th1 {\n\t\tmargin: 1rem;\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem 4rem;\n  font-size: 2rem;\n  color: ", ";\n  h1 {\n    margin: 1rem;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39,7 +39,7 @@ function _templateObject() {
 
 
 var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].header(_templateObject(), function (props) {
-  return props.theme.bright;
+  return props.theme.primary;
 });
 
 var Header =
@@ -119,7 +119,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n\thtml {\n\t\tfont-size: 10px;\n\t\tbox-sizing: border-box;\n\t}\n\t*, *:before, *:after {\n\t\tbox-sizing: inherit;\n\t}\n\tbody {\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tfont-family: sans-serif;\n\t\tbackground: #2c3e50;\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n\thtml {\n\t\tfont-size: 10px;\n\t\tbox-sizing: border-box;\n\t}\n\t*, *:before, *:after {\n\t\tbox-sizing: inherit;\n\t}\n\tbody {\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tfont-family: sans-serif;\n\t\tbackground: #fff;\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -134,8 +134,7 @@ function _templateObject() {
 var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["createGlobalStyle"])(_templateObject());
 var Inner = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
 var theme = {
-  dark: '#2c3e50',
-  bright: '#ecf0f1',
+  primary: '#222',
   border: '#ededed'
 };
 
@@ -144,31 +143,31 @@ var Page = function Page(props) {
     theme: theme,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(GlobalStyle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 35
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Inner, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
   }, props.children)));

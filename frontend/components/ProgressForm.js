@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export const Form = styled.form`
   display: flex;
   width: 90%;
-  background: ${props => props.theme.bright};
+  background: #fff;
+  border: 1px solid #ddd;
   justify-content: space-evenly;
   align-items: center;
   padding: 2rem;
@@ -14,14 +15,17 @@ export const Form = styled.form`
     padding: 0 1rem;
     width: 80%;
     font-size: 1.4rem;
+    color: ${props => props.theme.primary};
     input {
       display: block;
       margin: 0.5rem 0;
+      padding: 0.25rem;
       width: 90%;
       line-height: 2;
-      border: 1px solid ${props => props.theme.border};
+      border: 1px solid #ddd;
       border-radius: 2px;
       font-size: 1.5rem;
+      outline: none;
     }
   }
   #units {
@@ -31,9 +35,10 @@ export const Form = styled.form`
     width: 6rem;
     background: none;
     border: 0;
-    color: ${props => props.theme.dark};
+    color: ${props => props.theme.primary};
     font-size: 2rem;
     cursor: pointer;
+    margin-right: 2rem;
   }
 `;
 

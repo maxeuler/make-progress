@@ -6,7 +6,7 @@ import Signin from './Signin';
 const ToggleButton = styled.button`
   border: none;
   background: none;
-  color: ${props => props.theme.bright};
+  color: #fff;
   margin: 2rem auto;
   display: flex;
   justify-self: center;

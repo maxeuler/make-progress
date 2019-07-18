@@ -8,11 +8,16 @@ class Signin extends Component {
         <h3>Sign In</h3>
         <label htmlFor="email">
           Email
-          <input type="email" name="email" placeholder="Email" />
+          <input type="email" name="email" placeholder="Email" required />
         </label>
         <label htmlFor="password">
           Password
-          <input type="password" name="password" placeholder="Password" />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
         </label>
         <button type="submit">Sign In</button>
       </Form>
