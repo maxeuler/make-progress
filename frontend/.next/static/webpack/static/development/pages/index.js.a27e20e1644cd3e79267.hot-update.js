@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #fff;\n  padding: 3rem;\n  max-width: 900px;\n  margin: 0 auto;\n  margin-top: 4rem;\n  border-radius: 3px;\n  label {\n    margin: 2rem 0;\n    display: block;\n    font-size: 2rem;\n  }\n  input {\n    width: 100%;\n    font-size: 1.6rem;\n    padding: 0.25rem 0.5rem;\n    margin: 0.25rem 0;\n    line-height: 2;\n    border-radius: 3px;\n    border: none;\n  }\n  h3 {\n    font-size: 5rem;\n    margin: 0;\n    text-align: right;\n  }\n  button {\n    font-size: 2rem;\n    padding: 1rem;\n    border: none;\n    border-radius: 3px;\n    background: ", ";\n    color: #fff;\n    opacity: 0.95;\n    width: 100%;\n    margin-top: 1rem;\n    cursor: pointer;\n    :hover {\n      opacity: 1;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #fff;\n  padding: 3rem;\n  max-width: 900px;\n  margin: 0 auto;\n  margin-top: 4rem;\n  border: 1px solid #ddd;\n  border-radius: 3px;\n  label {\n    margin: 2rem 0;\n    display: block;\n    font-size: 2rem;\n  }\n  input {\n    width: 100%;\n    font-size: 1.6rem;\n    padding: 0.25rem 0.5rem;\n    margin: 0.25rem 0;\n    line-height: 2;\n    border-radius: 3px;\n    border: none;\n  }\n  h3 {\n    font-size: 5rem;\n    margin: 0;\n    text-align: right;\n  }\n  button {\n    font-size: 2rem;\n    padding: 1rem;\n    border: none;\n    border-radius: 3px;\n    background: ", ";\n    color: #fff;\n    opacity: 0.95;\n    width: 100%;\n    margin-top: 1rem;\n    cursor: pointer;\n    :hover {\n      opacity: 1;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32,4 +32,4 @@ var Form = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templ
 /***/ })
 
 })
-//# sourceMappingURL=index.js.b5b4e951ad84434641b0.hot-update.js.map
+//# sourceMappingURL=index.js.a27e20e1644cd3e79267.hot-update.js.map

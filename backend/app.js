@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const routes = require('./routes/routes');
+const errorHandler = require('./errorHandler');
 
 const app = express();
 
@@ -12,6 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/api', routes);
+
+app.use(errorHandler.notFount);
 
 require('dotenv').config({ path: 'variables.env' });
 

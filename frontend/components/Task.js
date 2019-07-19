@@ -66,6 +66,7 @@ const DeleteButton = styled.button`
   color: ${props => props.theme.primary};
   margin-right: 1rem;
   cursor: pointer;
+  outline: none;
 `;
 
 class Task extends Component {

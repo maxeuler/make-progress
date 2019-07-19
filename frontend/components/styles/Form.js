@@ -6,6 +6,7 @@ const Form = styled.form`
   max-width: 900px;
   margin: 0 auto;
   margin-top: 4rem;
+  border: 1px solid #ddd;
   border-radius: 3px;
   label {
     margin: 2rem 0;
@@ -19,12 +20,14 @@ const Form = styled.form`
     margin: 0.25rem 0;
     line-height: 2;
     border-radius: 3px;
-    border: none;
+    border: 1px solid #ddd;
+    outline: none;
   }
   h3 {
     font-size: 5rem;
     margin: 0;
     text-align: right;
+    color: ${props => props.theme.primary};
   }
   button {
     font-size: 2rem;
@@ -36,6 +39,7 @@ const Form = styled.form`
     opacity: 0.95;
     width: 100%;
     margin-top: 1rem;
+    outline: none;
     cursor: pointer;
     :hover {
       opacity: 1;

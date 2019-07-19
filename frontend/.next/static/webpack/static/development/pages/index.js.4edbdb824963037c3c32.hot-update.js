@@ -33,7 +33,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/make-progress/frontend/components/Auth.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n  border: none;\n  background: none;\n  color: #fff;\n  margin: 2rem auto;\n  display: flex;\n  justify-self: center;\n  cursor: pointer;\n  font-size: 2rem;\n  outline: none;\n  :hover {\n    font-weight: 500;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n  border: none;\n  background: none;\n  color: ", ";\n  margin: 2rem auto;\n  display: flex;\n  justify-self: center;\n  cursor: pointer;\n  font-size: 2rem;\n  outline: none;\n  :hover {\n    font-weight: 500;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -46,7 +46,9 @@ function _templateObject() {
 
 
 
-var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].button(_templateObject());
+var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].button(_templateObject(), function (props) {
+  return props.theme.primary;
+});
 
 var Auth =
 /*#__PURE__*/
@@ -124,4 +126,4 @@ function (_Component) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.b0d942ebc46376a399ce.hot-update.js.map
+//# sourceMappingURL=index.js.4edbdb824963037c3c32.hot-update.js.map
